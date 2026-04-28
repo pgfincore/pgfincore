@@ -822,7 +822,7 @@ pgfincore_file(char *filename, pgfincoreStruct *pgfncr)
 		x = HIGHBIT;
 
 		/* handle the results */
-		for (pageIndex = 0; pageIndex <= pgfncr->rel_os_pages; pageIndex++)
+		for (pageIndex = 0; pageIndex < pgfncr->rel_os_pages; pageIndex++)
 		{
 			// block in memory
 			if (vec[pageIndex] & FINCORE_PRESENT)
